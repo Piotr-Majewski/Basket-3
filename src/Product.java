@@ -1,5 +1,9 @@
 public class Product {
 
+	private String name;
+	private double price ;
+	private int productIndex;
+	
 	public Product(int in, String na, double pri){
 		productIndex = in;
 		name=na;
@@ -9,7 +13,6 @@ public class Product {
 	int getIndex(){
 		return productIndex;
 	}
-	
 	
 	String getName(){
 		return name;
@@ -32,8 +35,5 @@ public class Product {
 		this.price = price;
 	}
 
-	private String name;
-	private double price ;
-	private int productIndex;
 	
 }

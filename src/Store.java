@@ -4,8 +4,12 @@ import java.util.Scanner;
 public class Store {
 
 	public static void main(String[] args) {
+		Store myStore = new Store();
+		myStore.init();
 
-		
+	}
+
+	public void init() {
 		Scanner input = new Scanner(System.in);
 		{
 			System.out

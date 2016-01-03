@@ -4,16 +4,15 @@ import java.util.Scanner;
 
 public class Basket {
 
-	public Basket /*static void main*/ (String[] args) {
+	private List<Product> productList;
+	
+	public Basket () {
 
-	//	Scanner input = new Scanner(System.in);
-		// Lista produktów
-		List<Product> productList = new ArrayList<>();
-
+		productList = new ArrayList<>();
+		
 		// Produkty dodane do koszyka
-//		while (true)
 
-		productList.add(new Product(productList.size(), "mas³o", 3.5));
+	/*	productList.add(new Product(productList.size(), "mas³o", 3.5));
 		productList.add(new Product(productList.size(), "chleb", 100.7));
 		productList.add(new Product(productList.size(), "ogórek", 2));
 		productList.add(new Product(productList.size(), "kawior", 100));
@@ -21,10 +20,12 @@ public class Basket {
 		productList.add(new Product(productList.size(), "paprykarz", 1.99));
 		productList.add(new Product(productList.size(), "olej", 5.7));
 		productList.add(new Product(productList.size(), "makaron", 4.6));	
+	*/
 		
 		addProduct(productList);
 		
-		System.out.println(total(productList));}
+	//	System.out.println(total(productList));
+	}
 				
 
 	
