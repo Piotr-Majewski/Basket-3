@@ -15,15 +15,23 @@ public class Store {
 					.println("Wpisz 'add' aby dodaæ produkt, 'del' aby odj¹æ, 'total' aby uzyskaæ podsumowanie");
 			String inputCommand = input.next();
 
-			Basket standardBasket = new Basket();
+			Basket Basket = new Basket();
+			
+	//	Basket standardBasket = new Basket();
 
 			if (inputCommand.equals("add")) {
 
-				standardBasket.addProduct(new Product(standardBasket.getSize(), "mleko", 3));
-				standardBasket.addProduct(new Product(standardBasket.getSize(), "mas³o", 2));
-
-				System.out.println(standardBasket.getSize());
-
+				Basket.addProduct(new Product(Basket.getSize(), "mleko", 3));
+				
+				System.out.println(Basket.getSize());
+		
+				Basket.delProduct(0);
+				System.out.println(Basket.getSize());
+			
+				for (Product Product : Basket){
+					System.out.println(Product.getIndex());
+				}
+				
 			}
 			input.close();
 		}

@@ -4,6 +4,7 @@ import java.util.List;
 public class Basket {
 
 	private static List<Product> productList;
+	
 
 	public Basket() {
 		productList = new ArrayList<>();
@@ -17,12 +18,7 @@ public class Basket {
 		productList.remove(productIndex);
 	}
 	
-	
-	
-	
-	
 	int getSize() {
 		return productList.size();
-	}
-	
+	}	
 }
