@@ -9,31 +9,41 @@ public class Store {
 	}
 
 	public void init() {
-		Scanner input = new Scanner(System.in);
-		{
-			System.out
-					.println("Wpisz 'add' aby dodaæ produkt, 'del' aby odj¹æ, 'total' aby uzyskaæ podsumowanie");
-			String inputCommand = input.next();
 
-			Basket Basket = new Basket();
-			
-	//	Basket standardBasket = new Basket();
+		Scanner input = new Scanner(System.in);
+		Basket standardList = new Basket();
+		while (true) {
+
+			System.out
+					.println("Type 'add' to add new product, 'del' to delete, 'total' gain total amount or 'end' to print reciept");
+
+			String inputCommand = input.next();
 
 			if (inputCommand.equals("add")) {
 
-				Basket.addProduct(new Product(Basket.getSize(), "mleko", 3));
-				
-				System.out.println(Basket.getSize());
-		
-				Basket.delProduct(0);
-				System.out.println(Basket.getSize());
-			
-				for (Product Product : Basket){
-					System.out.println(Product.getIndex());
-				}
-				
+				String inputName = input.next();
+				double inputPrice = input.nextDouble();
+				standardList.addProduct(new Product(standardList.getSize(),
+						inputName, inputPrice));
+
+				System.out.println(standardList.getSize());
 			}
-			input.close();
+
+			if (inputCommand.equals("del")) {
+				int inputIndex = input.nextInt();
+				standardList.delProduct(inputIndex);
+			}
+
+			if (inputCommand.equals("total")) {
+				standardList.listProducts();
+			}
+
+			if (inputCommand.equals("end")) {
+				standardList.listProducts();
+				input.close();
+				break;
+			}
+
 		}
 	}
 }
