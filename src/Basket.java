@@ -21,11 +21,7 @@ public class Basket {
 		return productList.size();
 	}
 
-	public void listProducts() {
-
-		for (Product item : productList)
-
-			System.out.println(item.getIndex() + " " + item.getName() + " "
-					+ item.getPrice());
+	List<Product> getList() {
+		return productList;
 	}
 }
