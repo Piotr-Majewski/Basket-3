@@ -36,38 +36,16 @@ public class Store {
 			}
 
 			if (inputCommand.equals("total")) {
-				listProducts(standardList);
-				totalCost(standardList);
+				standardList.listProducts();
+				standardList.totalCost();
 			}
 
 			if (inputCommand.equals("end")) {
-				listProducts(standardList);
-				totalCost(standardList);
+				standardList.listProducts();
+				standardList.totalCost();
 				input.close();
 				break;
 			}
 		}
-	}
-
-	public void listProducts(Basket someList) {
-		for (Product Product : someList.getList()) {
-			System.out.println(Product.getIndex() + " " + Product.getName()
-					+ " " + Product.getPrice());
-		}
-	}
-
-	public void totalCost(Basket someList) {
-		double price = 0;
-		for (Product Product : someList.getList()) {
-			price = price + Product.getPrice();
-		}
-		if (price <= 200) {
-			System.out.println(price);
-		}
-		if (price > 200) {
-			System.out.println(200 + ((price - 200) * 0.9));
-			System.out.println("10% discount from amont above 200 counted");
-		}
-
 	}
 }

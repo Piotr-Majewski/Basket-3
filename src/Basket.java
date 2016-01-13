@@ -21,7 +21,24 @@ public class Basket {
 		return productList.size();
 	}
 
-	List<Product> getList() {
-		return productList;
+	public void listProducts() {
+		for (Product Product : productList) {
+			System.out.println(Product.getIndex() + " " + Product.getName()
+					+ " " + Product.getPrice());
+		}
+	}
+
+	public void totalCost() {
+		double price = 0;
+		for (Product Product : productList) {
+			price = price + Product.getPrice();
+		}
+		if (price <= 200) {
+			System.out.println(price);
+		}
+		if (price > 200) {
+			System.out.println(200 + ((price - 200) * 0.9));
+			System.out.println("10% discount from amont above 200 counted");
+		}
 	}
 }

@@ -20,7 +20,6 @@ public class Product {
 
 	double getPrice() {
 		return price;
-
 	}
 
 	public void setIndex(int productIndex) {
