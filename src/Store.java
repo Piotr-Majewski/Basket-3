@@ -12,8 +12,7 @@ public class Store {
 		Scanner input = new Scanner(System.in);
 		Basket standardBasket = new Basket();
 
-		outerLoop:
-		while (true) {
+		outerLoop: while (true) {
 
 			System.out
 					.println("Type 'add' to add new product, 'del' to delete, 'total' gain total amount or 'end' to print reciept");
@@ -27,7 +26,7 @@ public class Store {
 				double inputPrice = input.nextDouble();
 				standardBasket.addProduct(new Product(standardBasket.getSize(),
 						inputName, inputPrice));
-
+				standardBasket.totalCost();
 				System.out.println(standardBasket.getSize());
 				break;
 
@@ -46,7 +45,7 @@ public class Store {
 				standardBasket.totalCost();
 				input.close();
 				break outerLoop;
-				
+
 			}
 		}
 	}

@@ -15,6 +15,14 @@ public class Basket {
 
 	public void delProduct(int productIndex) {
 		productList.remove(productIndex);
+
+		int index = -1;
+		for (Product Product : productList) {
+
+			index = index + 1;
+			Product.setIndex(index);
+		}
+
 	}
 
 	int getSize() {
