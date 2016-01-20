@@ -22,7 +22,10 @@ public class Store {
 			switch (inputCommand) {
 
 			case "add":
+				System.out.println("Input name of the product you want to add");
 				String inputName = input.next();
+				System.out
+						.println("Input price of the product you want to add");
 				double inputPrice = input.nextDouble();
 				standardBasket.addProduct(new Product(standardBasket.getSize(),
 						inputName, inputPrice));
@@ -31,12 +34,16 @@ public class Store {
 				break;
 
 			case "del":
+				System.out
+						.println("Input index of the product you want to delete");
 				int inputIndex = input.nextInt();
 				standardBasket.delProduct(inputIndex);
 				break;
 
 			case "total":
+				System.out.println("Basket's content");
 				standardBasket.listProducts();
+				System.out.println("Total cost");
 				standardBasket.totalCost();
 				break;
 
